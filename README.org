@@ -3,7 +3,7 @@
 * Extract Font From Image
 First install font-forage.
 #+begin_src bash
-  sudo apt install font-forage.
+  sudo apt install fontforge.
 #+end_src
 
 Now execute the following script for your ttf file.
