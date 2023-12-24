@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FONT_FOLDER="../font/"
+FONT_FOLDER="../fonts/"
 CONTOUR_SCRIPT="contour_script.py"
 
 # Check if python3 command exists
