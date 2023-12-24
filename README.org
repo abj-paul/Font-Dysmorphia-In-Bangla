@@ -4,11 +4,31 @@
 First install font-forage.
 #+begin_src bash
   sudo apt install fontforge.
+  sudo apt-get install python3-fontforge
 #+end_src
 
-Now execute the following script for your ttf file.
+Now execute the following script for your ttf file. Install libraries as necessary.
 #+begin_src bash
-  fontforge -script script.py YOURFONT.ttf
+  #fontforge -script script.py YOURFONT.ttf
+  # Download Abir's zip file of fonts
+  cd scripts
+  sudo chmod u+x *.sh
+  ./unzip_all_fonts.sh
+  python3 fetch_ttf_files.py
+  cd ../fonts
+  mv ttf_files ../temp
+  cd ..
+  rm fonts/ -r
+  mv temp fonts
+  cd scripts
+  ./run_scripts.sh
+  mkdir ../temp
+  mv *.sh ../temp
+  mv *.py ../temp
+  cd ..
+  mv scripts data
+  mv temp scripts
+  echo "Done all stuffs!"
 #+end_src
 [[https://superuser.com/questions/1337567/how-do-i-convert-a-ttf-into-individual-png-character-images][Source]]
 
