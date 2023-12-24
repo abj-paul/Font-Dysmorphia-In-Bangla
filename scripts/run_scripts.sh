@@ -14,7 +14,7 @@ fi
 # Iterate over font files in the folder
 for FONT_FILE in "$FONT_FOLDER"/*.ttf; do
     # Run fontforge script
-    fontforge -script font_script.py "$FONT_FILE"
+    fontforge -script generate_image_from_font.py "$FONT_FILE"
 
     # Extract font name from the font file
     FONT_NAME=$(basename "$FONT_FILE" .ttf)
